@@ -1,0 +1,78 @@
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title> Study Squirrel - Login </title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="universal.css">
+  <style>
+    .subtitle {
+      color: #6D412A;
+      font-size: 16px;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .signup-text {
+      text-align: center;
+      color: #6D412A;
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    .signup-text a {
+      color: #3b76c4;
+      text-decoration: none;
+    }
+
+    .toggle-password {
+      position: absolute;
+      right: 0;
+      top: 27px;
+      cursor: pointer;
+      color: #6D412A;
+      background: none;
+      border: none;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <img src="side.png" alt="" class="side-image">
+  <div class="content-wrapper">
+    <div class="logo">
+      <img src="logo.png" alt="Study Squirrel Logo">
+    </div>
+    
+    <h1>Login</h1>
+    <div class="signup-text">New to Study Squirrel? <a href="create_account.html">Create account</a></div>
+
+    <form data-form-type="login">
+      <div class="form-group">
+        <label class="form-label"> U S E R N A M E</label>
+        <input type="text" id="username" placeholder="Enter your username">
+      </div>
+
+      <div class="form-group">
+        <label class="form-label"> P A S S W O R D </label>
+        <input type="password" id="password" placeholder="Enter your password">
+        <button type="button" class="toggle-password" onclick="togglePassword('password')">👁</button>
+      </div>
+
+      <button type="submit" class="submit-button">Login</button>
+    </form>
+
+<script>
+function togglePassword() {
+  var x = document.getElementById("password");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+}
+</script>
+
+  </div>
+</body>
+</html>

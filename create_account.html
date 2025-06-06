@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title> Study Squirrel - Create Account </title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="universal.css">
+  <style>
+    .toggle-password1 {
+    position: absolute;
+    right: 0;
+    top: 29px;
+    cursor: pointer;
+    color: #6D412A;
+    background: none;
+    border: none;
+    font-size: 16px;
+    }
+    .toggle-password2 {
+    position: absolute;
+    right: 0;
+    top: 6px;
+    cursor: pointer;
+    color: #6D412A;
+    background: none;
+    border: none;
+    font-size: 16px;
+    }
+    .login-text {
+      text-align: center;
+      color: #6D412A;
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    .login-text a {
+      color: #3b76c4;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <img src="side.png" alt="" class="side-image">
+  <div class="content-wrapper">
+    <div class="logo">
+      <img src="logo.png" alt="Study Squirrel Logo">
+    </div>
+    
+    <h1> Create New Account </h1>
+    <div class="login-text">Already Registered? <a href="login_page.html"> Login</a></div>
+
+    <form data-form-type="signup">
+      <div class="form-group">
+        <label class="form-label"> U S E R N A M E</label>
+        <input type="text" id="username" placeholder="Choose a username">
+      </div>
+
+      <div class="form-group">
+        <label class="form-label"> E M A I L </label>
+        <input type="email" id="email" placeholder="Enter your email">
+      </div>
+
+      <div class="form-group">
+        <label class="form-label"> P A S S W O R D</label>
+        <input type="password" id="password" placeholder="Choose a password">
+        <button type="button" class="toggle-password1" onclick="togglePassword('password')">👁</button>
+      </div>
+
+      <div class="form-group">
+        <input type="password" id="confirmPassword" placeholder="Confirm your password">
+        <button type="button" class="toggle-password2" onclick="togglePassword2('confirmPassword')">👁</button>
+      </div>
+
+      <button type="submit" class="submit-button">Sign up</button>
+    </form>
+
+<script>
+
+function togglePassword() {
+  var x = document.getElementById("password");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+}
+
+function togglePassword2() {
+  var z = document.getElementById("confirmPassword");
+  if (z.type === "password") {
+    z.type = "text";
+  } else {
+    z.type = "password";
+  }
+}
+
+</script>
+
+</div>
+
+</body>
+</html>
